@@ -34,12 +34,14 @@
       
       if (noClicks < 10) {
         const noWidth = parseFloat(window.getComputedStyle(noBtn).width);
+        const noHeight = parseFloat(window.getComputedStyle(noBtn).height);
         const noFont = parseFloat(window.getComputedStyle(noBtn).fontSize);
         const yesWidth = parseFloat(window.getComputedStyle(yesBtn).width);
         const yesFont = parseFloat(window.getComputedStyle(yesBtn).fontSize);
 
         noBtn.style.width = (noWidth * 0.8) + "px";
         noBtn.style.fontSize = (noFont * 0.8) + "px";
+        noBtn.style.height = (noHeight * 0.9) + "px";
 
         yesBtn.style.width = (yesWidth * 1.15) + "px";
         yesBtn.style.fontSize = (yesFont * 1.15) + "px";
