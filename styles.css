@@ -1,0 +1,89 @@
+/* Basic reset and styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #AEE1F9; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 400px; 
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.image-container {
+  margin: 15px 0;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+button {
+  font-size: 1em;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, width 0.3s, font-size 0.3s;
+}
+
+#yesButton,
+#noButton {
+  width: 100px;
+}
+
+
+#yesButton {
+  background: #0a2f86;
+  color: #fff;
+}
+
+#yesButton:hover {
+  background: #00fbff;
+}
+
+/* No button styling */
+#noButton {
+  background: #555;
+  color: #fff;
+}
+
+#noButton:hover {
+  background: #333;
+}
+
+
+#hiddenMessage {
+  display: none;
+  margin-top: 15px;
+  font-size: 1.2em;
+}

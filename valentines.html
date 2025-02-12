@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Valentine?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 id="header">Will You Be My Valentines? :DDD</h1>
+
+    <div class="image-container">
+      <img src="dda.jpg" alt="Insert your image here" id="valentineImage" />
+    </div>
+
+    <div class="button-container">
+      <button id="yesButton" onclick="yesClicked()">Yes</button>
+      <button id="noButton" onclick="noClicked()">No</button>
+    </div>
+    
+    <p id="hiddenMessage">
+      YAYYYYY I LOVE YOUUU
+    </p>
+  </div>
+
+  <script>
+    let noClicks = 0;
+
+    function noClicked() {
+      noClicks++;
+      const noBtn = document.getElementById('noButton');
+      const yesBtn = document.getElementById('yesButton');
+      
+      if (noClicks < 10) {
+        const noWidth = parseFloat(window.getComputedStyle(noBtn).width);
+        const noFont = parseFloat(window.getComputedStyle(noBtn).fontSize);
+        const yesWidth = parseFloat(window.getComputedStyle(yesBtn).width);
+        const yesFont = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+
+        noBtn.style.width = (noWidth * 0.8) + "px";
+        noBtn.style.fontSize = (noFont * 0.8) + "px";
+
+        yesBtn.style.width = (yesWidth * 1.15) + "px";
+        yesBtn.style.fontSize = (yesFont * 1.15) + "px";
+      }
+      
+      if (noClicks === 5) {
+        document.getElementById('header').innerText = "wyd????";
+        document.getElementById('valentineImage').src = "wyd.jpg"; // Replace with your image
+      }
+      
+      if (noClicks === 10) {
+        document.getElementById('header').innerText = "erm actually, now there is no other option!";
+        document.getElementById('valentineImage').src = "now.jpg"; // Replace with your image
+        noBtn.style.display = 'none';
+      }
+    }
+
+    function yesClicked() {
+      document.getElementById('hiddenMessage').style.display = 'block';
+      document.getElementById('valentineImage').src = "final.jpg"; // Replace with your image
+      document.getElementById('header').innerText = "YAYYYYYY";
+      
+    }
+  </script>
+</body>
+</html>
